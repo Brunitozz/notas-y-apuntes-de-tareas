@@ -3,3 +3,21 @@ pedirá la introducción de un número entero a través del teclado, tantas vece
 sea necesario, hasta que el número suministrado se encuentre en el intervalo
 determinado por los datos de entrada. Una vez validado el número leído, el
 subprograma lo devolverá.*/
+
+Accion INTERVALO(Entero: x, Entero: z)
+DV
+    Entero num
+    Booleano veracidad
+Inicio
+    
+    hacer 
+        Leer(num)
+        Si (x<num y num<z) entonces
+            Escribir("el numero es esta dentro del intervalo")
+            veracidad <-- falso
+        Sino
+            Escribir("El numero no esta dentro del intervalo, vuelva intentarlo")
+            veracidad <-- verdadero
+        FinSi
+    mientras(veracidad)
+FAccion
