@@ -1,0 +1,13 @@
+/*4. Escribe un subprograma que reciba dos números enteros positivos y devuelva su
+producto calculado usando sólo sumas.*/
+
+Entero Accion PRODUCTO(Entero x, Entero y)
+DV
+    Entero suma
+Inicio
+    suma <-- 0
+    Para i desde 1 a y [inc + 1] hacer
+        suma <-- suma + x
+    FinPara
+    devolver (suma)
+FAccion
