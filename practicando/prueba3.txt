@@ -1,0 +1,15 @@
+Acción Suma_Fracciones
+DV
+    Entero n //Entrada
+    Real suma //Salida
+    Entero i 
+Inicio
+    suma <-- 0
+    i <-- 1
+    Leer (n)
+    Mientras (i<=n) hacer
+        suma <-- suma + i/(i+1)
+        i <-- i + 1
+    FMientras
+    Escribir suma 
+Fin 

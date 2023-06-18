@@ -1,0 +1,22 @@
+Entero Accion HallarRaices(Real a, Real b, Real c, Real &x1, Real &x2)
+Accion Principal
+DV
+    Real a1, b1, c1 //Entrada de valores de la ecuacion
+    Real raiz1, raiz2 //Salida de resultados 
+Inicio
+    Leer (a1,b1,c1)
+    HallarRaices(a1,b1,c1,raiz1,raiz2)
+FAccion
+Entero Accion HallarRaices(Real a, Real b, Real c, Real &x1, Real &x2)
+DV
+    Real discriminante 
+Inicio
+    discriminate <-- b**2 - 4*a*c
+    Si(discriminante<0) entonces
+        Escribir ("No existen solociones reales")
+    Sino 
+        x1 <-- (- b + discriminante**0.5)*0.5/a
+        x2 <-- (- b - discriminante**0.5)*0.5/a
+    FinSi
+    retornar (x1,x2)
+Fin

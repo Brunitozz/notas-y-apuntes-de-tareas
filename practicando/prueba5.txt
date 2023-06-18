@@ -1,0 +1,29 @@
+En una organización hay n trabajadores. Cada
+trabajador tiene un sueldo. Se pide hallar:
+a) ¿Cuánto paga en total la organización a sus n
+trabajadores?
+b) ¿Cuántos trabajadores ganan más de 5000 soles?
+
+Acción Sueldo_TRabajador
+DV
+    Entero n //Entrada
+    Real sueldo //Entrada
+    Entero suelmayor // Salida
+    Real total // Salida
+    Entero obr
+Inicio
+    obr <-- 1
+    suelmayor <-- 0
+    total <--0
+    Leer n
+    Hacer
+        Leer sueldo
+        Si (sueldo>=5000) entonces
+            suelmayor <-- suelmayor + 1
+        FSi
+        total <-- total + sueldo
+        obr <-- obr + 1
+    Mientras (obr<=n)
+    Escribir total
+    Escribir suelmayor
+Fin

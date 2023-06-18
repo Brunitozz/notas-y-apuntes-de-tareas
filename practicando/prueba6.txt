@@ -1,0 +1,30 @@
+- Suponga que actualmente las poblaciones de los
+países A y B son 52 y 85 millones de habitantes
+respectivamente. Supongamos que las tasas de
+crecimiento de población son 6% y 4%
+respectivamente. Determine en que año la población A
+excede a la población B.
+
+- Resuelva el problema considerando que todos los
+valores son datos. Realice las verificaciones
+necesarias.
+
+Algoritmo Polaciones_Calculo
+DV
+    Real a, b
+    Constante Real ia <-- 0.06
+    Constante Real ib <-- 0.04
+    Real time  //Salida
+Inicio 
+    time <-- 0
+    a <-- 52
+    b <-- 85
+    Hacer
+        time <-- time + 1
+        a <-- a + a*ia*time
+        b <-- b + b*ia*time
+    Mientras (b > a)
+    Escribir ("El año en que A sobre pasa a B es ", time)
+Fin
+
+

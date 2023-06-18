@@ -1,0 +1,16 @@
+Calcular la suma de n términos de la serie
+1 + 2 + 3 + 4 + 5 + ....+ n
+
+Algoritmo Sumar_Términos
+DV 
+    Entero n //Entrada
+    Entero suma //Salida
+    Entero i //Contador
+Inicio 
+    Leer n 
+    suma <-- 0w
+    Para i desde 1 a n [inc + 1] Hacer 
+        suma <-- i + suma
+    FPara
+    Escribir suma 
+Fin 

@@ -1,0 +1,19 @@
+/*
+Escribe el subprograma CAPICUA que, haciendo uso del subprograma INVERSO,
+devuelva un valor booleano que indique si el número entero positivo que recibe como
+argumento es o no capicúa.
+*/
+Booleano Accion CAPICUA(Entero: num)
+DV 
+    Entero copiaNum
+    Booleano valor
+Inicio
+    copiaNum <-- INVERSO(num)
+    Si (copiaNum == num) entonces
+        valor <-- verdadero
+    Sino
+        valor <-- falso
+    FinSi
+    devolver (valor)
+FAccion
+

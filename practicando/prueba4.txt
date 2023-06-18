@@ -1,0 +1,19 @@
+Hallar el promedio de cada uno de n alumnos.
+Considere que cada alumno tiene 3 notas: examen
+parcial, examen final y práctica.
+
+Acción Promedio_Alumno
+DV
+    Entero n, parcial, final, practica //Entrada
+    Real prom //Salida
+    Entero numAlum
+Inicio
+    numAlum <-- 1
+    Leer n
+    Hacer
+        Leer (parcial, final, practica)
+        prom <-- (parcial + final + practica)/3
+        Escribir prom
+        numAlum <-- numAlum + 1
+    Mientras (numAlum<=n)
+Fin

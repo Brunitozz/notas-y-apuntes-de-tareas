@@ -1,0 +1,17 @@
+Entero Accion HallarCuadrado(Entero: x)
+Accion Principal 
+DV
+    Entero n //Entrada
+    Entero cuadrado //Salida
+Inicio
+    Leer (n)
+    cuadrado <-- HallarCuadrado(n)
+    Escribir (cuadrado)
+Fin 
+Entero Accion HallarCuadrado(Entero: x)
+DV
+    Entero c //Variable local del cuadrado
+Inicio
+    c <-- x*x
+    retornar (c)
+FAccion     

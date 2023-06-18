@@ -1,0 +1,24 @@
+Escribir el pseudocódigo para hallar el
+promedio de un alumno que tiene n notas.
+
+Acción Calcular_Promedio
+DV 
+    Entero n //Entrada
+    Real nota // Entrada
+    Real promedio // Salida
+    Real Suma //Proceso 
+    Entero i
+Inicio
+    i <-- 1
+    suma <-- 0
+    Leer n
+    Mientras (i<=n) hacer
+        leer nota
+        suma <-- suma + nota
+        i <-- i + 1
+    FMientras
+    promedio <-- suma/n 
+    Escribir (promedio)
+Fin
+
+

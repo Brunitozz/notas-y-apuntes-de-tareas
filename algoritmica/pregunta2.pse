@@ -1,0 +1,55 @@
+
+Algoritmo EncontrarPrimosGemelos
+var
+    entero: a, b, cont, n
+    booleano: validarDatos
+INICIO
+    cont <- 0
+    n <- 1
+    validarDatos <- falso
+
+    Mientras (!validarDatos) hacer
+        pedirDatos(a, b)
+        Si (validarDatos = falso) entonces
+            Escribir("INCORRECTO")
+        fin_si
+    fin_mientras
+
+    Para (k=a+1 hasta b-3) hacer
+        Si ( ( primo(k+2) - primo(k) ) = 2) entonces
+            Escribir(n, “. ”, primo(k), “ ”,  primo(k+2))
+            cont <- cont + 1
+            n ← n + 1
+        fin_si
+    fin_para
+    Escribir(“Hay ”, cont*2, “ numeros primos gemelos”)
+FIN
+
+Procedimiento pedirDatos(entero: &min, &max)
+INICIO
+    Escribir(“Digite un valor para a: ”)
+    Leer(min)
+    Si (min>0) entonces
+        Escribir(“Digite un valor para b: ”)
+        Leer(max)
+            Si (max>min) entonces
+                valDat ← verdadero
+            fin_si
+    fin_Si
+Fin_procedimiento
+
+entero funcion primo(entero: num)
+var
+    entero: prim, j, contDiv
+INICIO
+    Para (j=1 hasta j<=num) hacer
+        contDiv <- 0
+        Si ( (num mod j) = 0 ) entonces
+            contDiv <- contDiv + 1
+        fin_si
+    fin_para
+    Si (contDiv = 2) entonces
+        Prim = num
+    fin_si
+    devolver(prim)
+Fin_funcion

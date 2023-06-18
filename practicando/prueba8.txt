@@ -1,0 +1,5 @@
+Hallar el producto de los n primeros números
+naturales
+
+1 * 2 * 3 * 4 * .........
+

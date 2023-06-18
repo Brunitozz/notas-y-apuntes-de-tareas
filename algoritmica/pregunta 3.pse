@@ -1,0 +1,24 @@
+Algoritmo Cambio_Monedas
+Constantes
+	Entero monedas[4] <-- {10, 5, 2, 1}
+DV
+	Entero pesos[4], numero, sumaPesos
+	Entero i,j
+Inicio
+dfd
+	sumaPesos <-- 0
+	Escribir("Digite un numero: ")
+	Leer (numero)
+	Para i desde 0 a 3 [inc + 1] hacer
+		pesos[i] <-- Entero ( numero/ monedas[i])
+		numero <-- numero mod monedas[i]
+		sumaPesos <-- sumaPesos + pesos[i]
+	FPara
+	Escribir("El total es: ", sumaPesos,"\n")
+	Para j desde 0 a 3 [inc + 1] hacer
+		Si (pesos[j] <> 0) entonces
+			Escribir(pesos[j]," monedas de ", monedas[j],"\n")
+		FSi
+	FPara	
+Fin 
+	

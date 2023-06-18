@@ -1,0 +1,42 @@
+Booleano Accion CAPICUA(Entero: num)
+Entero Acción INVERSO(Entero: x)
+
+Accion Principal 
+DV
+    Entero numero //Salida
+    Entero num_invertido 
+    Booleano veracidad
+Inicio
+    Leer (numero)
+    num_invertido <-- INVERSO(numero) //Invirtiendo el numero
+    veracidad <-- CAPICUA(numero) //Comprobando si es capicua
+    Escribir("Su numero invertido es: ", num_invertido)
+    Escribir("¿Es capicua? - ", veracidad)
+Fin
+
+Entero Acción INVERSO(Entero: x)
+DV 
+    Entero num_inverso, digito
+Inicio
+    num_inverso <-- 0
+    Mientras (x>0) hacer
+        digito <-- x % 10
+        num_inverso <-- num_inverso * 10 + digito
+        x <-- x / 10
+    FMientras
+    devolver (num_inverso)
+FAccion
+
+Booleano Accion CAPICUA(Entero: num)
+DV 
+    Entero copiaNum
+    Booleano valor
+Inicio
+    copiaNum <-- INVERSO(num)
+    Si (copiaNum = num) entonces
+        valor <-- verdadero
+    Sino
+        valor <-- falso
+    FinSi
+    devolver (valor)
+FAccion

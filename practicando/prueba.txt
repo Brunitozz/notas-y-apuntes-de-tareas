@@ -1,0 +1,15 @@
+Acción Sumar_Numeros
+DV
+    Entero n //Entrada
+    Entero suma //Salida
+    Entero i //Proceso
+Inicio
+    Leer n 
+    suma <-- 0
+    i <-- 1
+    Mientras (i <= n) hacer
+        suma <-- suma + i
+        i <-- i + 1
+    FMientras
+    Escribir Suma 
+Fin

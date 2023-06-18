@@ -1,0 +1,15 @@
+Algoritmo precio_bencina
+DV
+    Real X //Entrada
+    Real p //Salida
+Inicio
+    p --> x**3-2x**2+3*x-5
+    Si(p<-10) entonces
+        escribir ("El valor de la vencina baja en ", -p)
+    Sino
+        Si(p<=10) entonces
+            Escribir("El precio de la bencina se mantiene")
+        Sino    
+            Escribir("El precio de la bencina sube en ", p)
+        FSI
+    FSi

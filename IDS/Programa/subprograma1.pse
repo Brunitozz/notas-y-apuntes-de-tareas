@@ -1,0 +1,14 @@
+//1. Escribe el subprograma INVERSO que devuelve el resultado de invertir el número
+//entero positivo que se ingrese.
+Entero Acción INVERSO(Entero: x)
+DV 
+    Entero num_inverso, digitos
+Inicio
+    num_inverso <-- 0
+    Mientras (x>0) hacer
+        digito <-- x % 10
+        num_inverso <-- num_inverso * 10 + digito
+        x <-- x / 10
+    FMientras
+    devolver (num_imverso)
+FAccion

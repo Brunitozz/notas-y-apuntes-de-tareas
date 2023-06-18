@@ -1,0 +1,10 @@
+Entero Accion Factorial (Entero n)
+DV
+    Entero Facto
+INICIO
+    Facto <-- 1
+    Para i desde 1 a n [inc + 1] hacer
+        Facto <-- i*Facto
+    FPara
+    retornar Facto
+FAccion
