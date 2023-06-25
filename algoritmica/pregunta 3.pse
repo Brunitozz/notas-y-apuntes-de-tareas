@@ -1,24 +1,52 @@
-Algoritmo Cambio_Monedas
+Entero Algoritmo CalcularCambio(Entero numero, Constante Entero monedas[], Entero tipoMoneda[])
+Procedimiento ImprimirMonedas(Constante Entero tipoMoneda[], Constante Entero monedas[])
+Procedimiento Validacion(Entero &numero)
+
+Algoritmo Principal
 Constantes
 	Entero monedas[4] <-- {10, 5, 2, 1}
-DV
-	Entero pesos[4], numero, sumaPesos
-	Entero i,j
+var 
+	Entero tipoMoneda[4]
+	Entero numero, sumaCant_Monedas
 Inicio
-dfd
-	sumaPesos <-- 0
-	Escribir("Digite un numero: ")
-	Leer (numero)
-	Para i desde 0 a 3 [inc + 1] hacer
-		pesos[i] <-- Entero ( numero/ monedas[i])
-		numero <-- numero mod monedas[i]
-		sumaPesos <-- sumaPesos + pesos[i]
-	FPara
-	Escribir("El total es: ", sumaPesos,"\n")
-	Para j desde 0 a 3 [inc + 1] hacer
-		Si (pesos[j] <> 0) entonces
-			Escribir(pesos[j]," monedas de ", monedas[j],"\n")
-		FSi
-	FPara	
+	Validacion(numero)
+	sumaCant_Monedas <-- CalcularCambio(numero, monedas, tipoMoneda)
+	Escribir ("El total es: ", sumaCant_Monedas)
+	ImprimirMonedas(tipoMoneda, monedas)
 Fin 
-	
+
+// Función para calcular la cantidad de monedas y el total
+Entero Algoritmo CalcularCambio(Entero numero, Constante Entero monedas[], Entero tipoMoneda[])
+var 
+	Entero sumaCant_Monedas <-- 0
+Inicio
+	Para i desde 0 a i < 4 [inc + 1] hacer
+		tipoMoneda[i] <-- numero / monedas [i]
+		numero = numero % monedas [i]
+		sumaCant_Monedas <-- sumaCant_Monedas + tipoMoneda[i]
+	FPara 
+	devolver(sumaCant_Monedas)
+Fin 
+
+// Función para imprimir la cantidad de monedas de cada valor
+Procedimiento ImprimirMonedas(Constante Entero tipoMoneda[], Constante Entero monedas[])
+Inicio
+	Para j desde 0 a j < 4 [inc + 1] hacer
+		Si (tipoMoneda[j] <> 0) entonces
+			Escribir (tipoMoneda, " moneda(s) de ", monedas[j])
+		FinSi
+	FPara
+FinProcedimiento
+
+// Funcion para verificar datos
+Procedimiento Validacion(Entero &numero)
+Inicio 
+	Escribir("Digite un numero: ")
+	repetir
+		Leer(numero)
+		Si (numero <=0) entonces 
+			Escribir("El numero debe ser mayor a cero")
+		FinSi
+	Mientras(numero <= 0)
+FinProcedimiento
+

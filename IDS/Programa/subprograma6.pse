@@ -1,0 +1,12 @@
+/*6. Escriba subprograma que permita hallar el valor absoluto de un número entero.*/
+Real Accion VALOR_ABSOLUTO(Entero x)
+DV
+    Entero absoluto
+Inicio
+    Si (x>=0) entonces
+        absoluto <-- x 
+    Sino 
+        absoluto <-- x*-1 
+    FinSi
+    devolver (absoluto)
+FAccion

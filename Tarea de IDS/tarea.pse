@@ -1,0 +1,70 @@
+/*
+Elabore seudocódigo empleando programación modular (crear un Principal y subprogramas) para el siguiente caso:
+Halle la suma de los números primos que hay entre a y b (enteros).  
+Validar que el valor que b sea mayor que a y que que a sea mayor o igual que 0.
+*/
+Booleano Accion IdentificarPrimo(Entero x)
+Accion Validar_Maximo_Minimo(Entero a, Entero b)
+Entero Accion Mostrar_Suma(Entero x, Entero y)
+
+Accion Principal
+DV 
+    Entero a, b
+Inicio
+    Validar_Maximo_Minimo(a,b)
+    Mostrar Suma(a,b)
+Fin 
+
+Booleano Accion IdentificarPrimo(Entero x)
+DV 
+    Entero contador
+    Booleano numprimo
+Inicio
+    contador <-- 0
+    Para i desde 1 a x hacer
+        Si (x mod i = 0) entonces
+            contador <-- contador + 1
+        FinSi
+    FPara 
+    Si (contador = 2) entonces
+        numprimo <-- verdadero
+    Sino
+        numprimo <-- falso
+    FinSi
+    retornar (numprimo)
+FAccion 
+
+Accion Validar_Maximo_Minimo(Entero &a, Entero &b)
+Inicio
+    Hacer
+        Leer a
+        Si (a<0) entonces
+            Escribir ("ingrese nuevamente un valor positivo para a")
+        FinSi
+    Mientras (a<0)
+
+    Hacer 
+        Leer b
+        Si(b<=a) entonces
+            Escribir ("Escriba un numero mayor que a")
+        FinSi
+    Mientras (b<=a)
+FAccion
+
+Entero Accion Mostrar_Suma(Entero x, Entero y)
+DV
+    Entero suma
+    Booleano primo
+Inicio 
+    suma <-- 0
+    Para i desde x a y hacer
+        primo <-- IdentificarPrimo(i)
+        Si (primo = verdadero) entonces 
+            suma <-- suma + i
+        FinSi
+    FPara 
+    retornar (suma)
+FAccion 
+
+
+    

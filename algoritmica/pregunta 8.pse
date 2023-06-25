@@ -1,26 +1,54 @@
 Entero funcion NumCuadrado (Entero: a) //Prototipo
+Procedimiento Validacion_Datos(Entero: &num) //Prototipo
+Procedimiento MostrarSuma(Entero y)
+Procedimiento Entrada_Enteros(Entero: &numeros)
+
 Algoritmo Calcular_Cuadrado
 DV
-	Entero (n, cuadrado)
+	Entero n
 Inicio
-	Escribir("ingrese el numero :")
-	Leer n
-	cuadrado ← NumaCuadrado(n)
-	Escribir("=", cuadrado,"\n")
-	Escribir("el cuadrado del numero es: ", cuadrado)
+	Entrada_Enteros(n)
 Fin
+
+Procedimiento Validacion_Datos (Entero: &num)
+Inicio
+	Escribir("Escriba un numero para hallar su cuadrado: ")
+	repetir
+		Leer(num)
+		Si ( num < = 0 ) entonces
+			Escribir("Ingrese un numero mayor positivo y diferente de 0. ")
+		FinSi
+	mientras(num < = 0)
+FinProcedimiento
+
+Procedimiento Entrada_Enteros(Entero: &numeros)
+Inicio
+	repetir
+		Validacion_Datos(numeros)
+		MostrarSuma(numeros)
+	mientras(numeros <> 0)
+Fin_Procedimiento
+
+Procedimiento MostrarSuma(Entero y)
+var 
+	Entero cuadrado
+Inicio
+	cuadrado <-- NumCuadrado(y)
+	Escribir(" = ", cuadrado,"\n")
+	Escribir("el cuadrado del numero es: ", cuadrado, "\n")
+Fin_Procedimiento
 
 Entero funcion NumCuadrado (Entero: x)
 var
 	Entero (suma, num[x], i)
 Inicio
 	suma ← 0
-	Para i desde 0 a (x-1)[inc + 1] hacer
+	Para i desde 0 a i<x [inc + 1] hacer
 		num[i] ← 2*i + 1
-		suma ← suma + numa[i]
+		suma ← suma + num[i]
 	FPara
 	Para j desde 0 a (x-1)[inc + 1] hacer
-    	Escribir(num[j], “+”)
+    	Escribir(" + ", num[j])
     FPara
     devolver (suma)
-Fin función
+Fin_función
