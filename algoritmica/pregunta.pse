@@ -1,0 +1,44 @@
+/*
+a) Verificar si el número es un número de Armstrong. 
+Un número de Armstrong es aquel cuya suma de los cubos de sus dígitos es igual al número original. 
+Por ejemplo, 153 = 1^3 + 5^3 + 3^3.
+*/
+
+Entero Accion elevar_Cubo(entero x)
+Entero Accion suma_Cubos_Digitos(entero y)
+Booleano Accion numero_Armstrong(entero num)
+Accion Principal
+DV
+    Entero num
+Inicio
+    Leer(num)
+    Escribir(numero_Armstrong(num))
+Fin
+
+Entero Accion elevar_Cubo(entero x)
+DV
+    entero cubo
+Inicio
+    cubo <-- x*x*x
+    retornar cubo
+FAccion
+
+Entero Accion suma_Cubos_Digitos(entero y)
+DV
+    entero suma, digito
+Inicio
+    suma <-- 0
+    Mientras (y>0) hacer
+        digito <-- y mod 10
+        y <-- y div 10
+        suma <-- suma + elevar_Cubo(digito)
+    FMientras
+    retornar suma
+FAccion
+
+Booleano Accion numero_Armstrong (entero num)
+DV
+    Booleano verificacion
+Inicio
+    retornar (num == suma_Cubos_Digitos(num))
+FAccion

@@ -1,0 +1,51 @@
+/*
+Verificar si el número es un número de Harshad. 
+Un número de Harshad es aquel que es divisible por la suma de sus dígitos. 
+Por ejemplo, 18 es un número de Harshad ya que 18 / (1 + 8) = 2
+b) En caso de ser un número de Harshad, calcular y mostrar el promedio de sus dígitos. 
+En caso de no ser un número de Harshad, mostrar un mensaje indicando que no es un número de Harshad.
+*/
+Entero Accion Suma_Digitos(entero x)
+Booleano Accion numero_Harshad(entero num)
+Accion promedio_Digitos(entero num)
+Accion Principal
+DV
+    Entero num
+Inicio
+    Leer (num)
+    Escribir (numero_Armstrong(num))
+Fin
+
+Entero Accion Suma_Digitos(entero x)
+DV
+    entero suma, digito
+Inicio
+    suma <-- 0
+    Mientras (x>0) hacer
+        digito <-- x mod 10
+        x <-- x div 10
+        suma <-- suma + digito
+    FMientras
+    retornar suma
+FAccion
+
+Booleano Accion numero_Harshad(entero num)
+DV
+    Booleano check
+Inicio
+    Si(num mod Suma_Digitos(num) == 0) entonces
+        check <-- verdadero
+    Sino 
+        check <-- falso 
+    FinSi
+    retornar check
+FAccion 
+
+Accion promedio_Digitos(entero num)
+DV 
+    Real promedio, cant_numeros
+Inicio
+    cant_numeros <-- 0
+    Si (numero_Harshad(num)) entonces
+        
+

@@ -1,0 +1,2 @@
+- Saber como se hace una tabla con columnas y filas
+- generar numeros aleatorios
